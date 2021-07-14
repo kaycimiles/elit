@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+
+	<meta charset="utf-8">
+	<title> E-lit project </title>
+
+<style>
+	body {
+		background-image: url("art.jpg");
+		background-repeat: no-repeat;
+
+	}
+	button {
+		margin: auto;
+		padding: 20px;	
+		background-color: black;
+		width: 100px;
+		color: white;
+		font-family: agency FB;
+		font-size: 16px;
+	}
+	#doThis {
+		color: black;
+		font-size: 40px;
+		margin: 20px;
+		text-align: center;
+		font-family: agency FB;
+	}
+	footer {
+		position:fixed;
+   		left: 75%;
+  		bottom:0px;
+   		height:75px;
+   		width:100%;
+	}
+
+
+</style>
+</head>
+
+<body>
+	
+	<div class="poem">
+		<button onclick="displayPoems()">Click Me</button>
+		<p id="doThis"></p>
+	</div>
+
+	<footer> 
+		<p>Author: Rupi Kaur</p>
+		<p>Website Created By Kayci Miles</p>
+	</footer>
+
+	<script>
+		//function to display the poem
+		let options = [
+			'fall in love with your solitude',
+			'you do not just wake up and become the butterfly',
+			'growth is a process',
+			'if you are not enough for yourself you will never be enough for someone else',
+			'we are all born so beautiful',
+			'never feel guilty for starting again',
+			
+
+		];
+
+		function displayPoems(){
+		
+			var randOptionNum = Math.floor(Math.random() * options.length);
+
+			document.getElementById('doThis').innerHTML = ''; // clear previous text 
+			document.getElementById('doThis').innerHTML = options[randOptionNum]; // enter text
+
+		}
+
+	</script>
+</body>
+</html>
